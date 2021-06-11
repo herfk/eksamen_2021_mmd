@@ -1,0 +1,96 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  position: relative;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  min-height: 5vh;
+}
+
+.menuknap {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin-right: 1vw;
+  margin-top: 1vw;
+}
+
+.menuknap_burger {
+  width: 30px;
+  height: 2px;
+  background: black;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menuknap_burger::before,
+.menuknap_burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: black;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menuknap_burger::before {
+  transform: translateY(-10px);
+}
+
+.menuknap_burger::after {
+  transform: translateY(10px);
+}
+
+/* -----animation---- */
+
+.menuknap.open .menuknap_burger {
+  transform: translateX(50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menuknap.open .menuknap_burger::before {
+  transform: rotate(45deg) translate(-35px, 35px);
+}
+
+.menuknap.open .menuknap_burger::after {
+  transform: rotate(-45deg) translate(-35px, -35px);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-100vw);
+}
+
+#menu {
+  list-style-type: none;
+  transition: transform 0.3s;
+  background-color: beige;
+  text-align: right;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+#menu li a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  font-size: 1rem;
+}
