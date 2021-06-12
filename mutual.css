@@ -1,7 +1,5 @@
 header {
   display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 10vh;
   position: relative;
 }
@@ -77,14 +75,16 @@ header {
 }
 
 #menu {
+  display: grid;
+  grid-template-columns: repeat(6, 150px);
   list-style-type: none;
   transition: transform 0.3s;
-  background-color: beige;
   text-align: right;
   transition: all 1s ease-in-out;
   position: absolute;
-  top: 100%;
-  width: 100%;
+  top: 65%;
+  width: 650px;
+  padding: 0;
 }
 
 #menu li a {
@@ -92,5 +92,7 @@ header {
   text-decoration: none;
   font-weight: 500;
   color: black;
-  font-size: 1rem;
+  text-shadow: 0 0 7px gray;
+  font-size: 1.5rem;
+  padding-right: 1vw;
 }
