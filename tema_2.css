@@ -1,1 +1,11 @@
-/*ye*/
+main {
+  margin-left: 5vw;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    rgba(244, 76, 76, 1) 0%,
+    rgba(98, 98, 98, 1) 100%
+  );
+}
