@@ -9,3 +9,20 @@ body {
     rgba(98, 98, 98, 1) 100%
   );
 }
+
+.list_1:hover {
+  display: flex;
+  list-style: none;
+}
+
+.list_1 li:hover {
+  background: white;
+  width: 100px;
+  height: 50px;
+}
+
+li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  padding: 1vw;
+}
