@@ -1,5 +1,11 @@
 main {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
   margin-left: 5vw;
+}
+
+h1 {
+  grid-column: 2 / 3;
 }
 
 body {
@@ -10,15 +16,130 @@ body {
   );
 }
 
+#first_section,
+#second_section,
+#third_section {
+  grid-column: 2 / 3;
+}
+
+#third_section {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+#third_section a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
 .list_1:hover {
   display: flex;
   list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  animation-name: hover;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  background: rgba(128, 128, 128, 0.3);
 }
 
-.list_1 li:hover {
+.list_1 li {
   background: white;
-  width: 100px;
-  height: 50px;
+  width: 3vw;
+  height: 1vw;
+  margin: 1vw;
+}
+
+.list_2:hover {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  list-style: none;
+  animation-name: hover;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  background: rgba(128, 128, 128, 0.3);
+}
+
+@keyframes hover {
+  from {
+    transform: translateX(-30px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.elem_1 {
+  grid-column: 3 / 4;
+  grid-row: 1;
+}
+
+.elem_2 {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.elem_3 {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+.elem_4 {
+  display: block;
+  background: linear-gradient(rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%);
+  width: 500px;
+  height: 250px;
+  border-radius: 5%;
+  box-shadow: 0 2px 5px rgb(145, 145, 145);
+  margin: 5vw;
+  animation-name: box;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.elem_4:hover {
+  display: block;
+  background: honeydew;
+  width: 500px;
+  height: 250px;
+  margin: 5vw;
+  animation-name: box_hover;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes box {
+  from {
+    transform: translateX(-200px);
+  }
+
+  to {
+    transform: translateX(200px);
+  }
+}
+
+@keyframes box_hover {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+.list_2 li {
+  background: white;
+  width: 3vw;
+  height: 1vw;
+  margin: 1vw;
 }
 
 li {
