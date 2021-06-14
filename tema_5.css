@@ -3,6 +3,11 @@ main {
   grid-template-columns: 100px 1fr 100px;
 }
 
+video {
+  width: 100%;
+  height: auto;
+}
+
 #first_section {
   grid-column: 2 / 3;
 }
