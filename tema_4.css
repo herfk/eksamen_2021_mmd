@@ -1,1 +1,225 @@
-/*ye*/
+main {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#screen {
+  width: 100vw;
+  height: 56.25vw;
+  overflow: hidden;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#game_background {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(138, 0, 0, 1) 100%
+  );
+}
+
+#game_elements {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#game_ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#score_board {
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+  font-size: 3vw;
+  font-family: monospace;
+}
+
+#energy_board {
+  position: absolute;
+  bottom: 1vw;
+  left: 1vw;
+  display: flex;
+  gap: 0.5vw;
+}
+
+#energy_board img {
+  width: 5vw;
+}
+
+.gray {
+  filter: grayscale(80%);
+}
+
+#hero_container {
+  position: absolute;
+}
+
+#hero_sprite {
+  width: 19vw;
+  height: 14.54vw;
+  background-image: url(img/spil_filer/hero.svg);
+  background-size: 100%;
+  top: 23vw;
+  position: relative;
+}
+
+#monster_container1 {
+  position: absolute;
+}
+
+#monster_sprite1 {
+  width: 10vw;
+  height: 8.1vw;
+  background-image: url(img/spil_filer/monster_1.svg);
+  background-size: 100%;
+}
+
+#monster_container2 {
+  position: absolute;
+}
+
+#monster_sprite2 {
+  width: 14vw;
+  height: 20.2vw;
+  background-image: url(img/spil_filer/monster_2.svg);
+  background-size: 100%;
+}
+
+#monster_container3 {
+  position: absolute;
+}
+
+#monster_sprite3 {
+  width: 10vw;
+  height: 10vw;
+  background-image: url(img/spil_filer/monster_3.svg);
+  background-size: 100%;
+}
+
+#monster_container4 {
+  position: absolute;
+}
+
+#monster_sprite4 {
+  width: 16vw;
+  height: 18vw;
+  background-image: url(img/spil_filer/monster_4.svg);
+  background-size: 100%;
+}
+
+.pos1 {
+  top: 5vw;
+  right: -10vw;
+}
+
+.pos2 {
+  top: 15vw;
+  right: -10vw;
+}
+
+.pos3 {
+  top: 20vw;
+  right: -10vw;
+}
+
+.pos4 {
+  top: 25vw;
+  right: -10vw;
+}
+
+.pos5 {
+  top: 35vw;
+  right: -10vw;
+}
+
+.forsvind {
+  animation-name: forsvind_kf;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes forsvind_kf {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+}
+
+.frys {
+  animation-play-state: paused;
+}
+
+.flyv {
+  animation-name: flyv_kf;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes flyv_kf {
+  100% {
+    transform: translateX(-120vw);
+  }
+}
+
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 1s;
+}
+
+.delay3 {
+  animation-delay: 2s;
+}
+
+.speed1 {
+  animation-duration: 3s;
+}
+
+.speed2 {
+  animation-duration: 4s;
+}
+
+.speed3 {
+  animation-duration: 5s;
+}
+
+.speed4 {
+  animation-duration: 6s;
+}
