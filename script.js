@@ -182,8 +182,7 @@ function genstartMonster4() {
 
     //Giv en position til container
     document.querySelector("#monster_container4").classList.add("pos" + myRand);
-
-    //giv container ny tilfældig speed
+    
     document.querySelector("#monster_container4").classList.add("speed4");
 
     //Start flyv-animationer på element
