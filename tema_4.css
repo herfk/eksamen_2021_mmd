@@ -3,9 +3,20 @@ main {
   grid-template-columns: 100px 1fr 100px;
 }
 
-* {
+#first_section {
+  grid-column: 2 / 3;
+}
+
+#second_section {
+  grid-column: 1 / 4;
   box-sizing: border-box;
 }
+
+h1 {
+  grid-column: 2 / 3;
+}
+
+/*--------------- Spil Kode ------------------*/
 
 body {
   margin: 0;
@@ -63,7 +74,7 @@ body {
 
 #energy_board {
   position: absolute;
-  bottom: 1vw;
+  top: 1vw;
   left: 1vw;
   display: flex;
   gap: 0.5vw;

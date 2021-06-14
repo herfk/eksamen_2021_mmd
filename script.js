@@ -11,13 +11,9 @@ function startGame() {
     console.log("startGame");
 
     //Giv container en position en delay og en speed
-
     document.querySelector("#monster_container1").classList.add("pos1", "delay1", "speed3");
-
     document.querySelector("#monster_container2").classList.add("pos2", "delay2", "speed1");
-
     document.querySelector("#monster_container3").classList.add("pos3", "delay3", "speed4");
-
     document.querySelector("#monster_container4").classList.add("pos4", "delay3", "speed2");
 
     //Start flyv-animationer på alle elementer
