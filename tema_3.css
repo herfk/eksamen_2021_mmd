@@ -1,1 +1,61 @@
-/*ye*/
+main {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  margin-left: 5vw;
+}
+
+body {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+img {
+  display: block;
+  width: 75%;
+  height: auto;
+}
+
+h1 {
+  grid-column: 2 / 3;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+#second_section a {
+  color: black;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  text-shadow: 1px 2px 2px white;
+}
+
+#second_section a:visited {
+  color: black;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  text-shadow: 1px 2px 2px white;
+}
+
+#first_section,
+#second_section {
+  grid-column: 2 / 3;
+}
+
+#second_section {
+  text-align: center;
+}
+
+.section_wrapper {
+  display: flex;
+}
+
+.col_ img {
+  margin-left: 5vw;
+  margin-right: 30vw;
+}
