@@ -66,8 +66,7 @@ function genstartMonster1() {
     document.querySelector("#monster_container1").offsetLeft;
 
     myRand = Math.floor(Math.random() * 5) + 1;
-
-    //Giv en position til container
+    
     document.querySelector("#monster_container1").classList.add("pos" + myRand);
 
     document.querySelector("#monster_container1").classList.add("speed1");
