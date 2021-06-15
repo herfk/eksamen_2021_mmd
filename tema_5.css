@@ -1,3 +1,11 @@
+body {
+  background: linear-gradient(
+    180deg,
+    rgba(185, 185, 185, 1) 0%,
+    rgba(135, 113, 138, 1) 100%
+  );
+}
+
 main {
   display: grid;
   grid-template-columns: 100px 1fr 100px;
@@ -8,7 +16,8 @@ video {
   height: auto;
 }
 
-#first_section {
+#first_section,
+#second_section {
   grid-column: 2 / 3;
 }
 
@@ -21,10 +30,58 @@ h1 {
   grid-column: 2 / 3;
 }
 
+h4 {
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 2px 2px 2px rgb(128, 128, 128);
+}
+
 .col_1 {
   grid-column: 1 / 2;
 }
 
 .col_2 {
   grid-column: 3 / 4;
+}
+
+#second_section a {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 3rem;
+}
+
+@media (max-width: 800px) {
+  #first_section,
+  #second_section {
+    grid-column: 1 / 4;
+  }
+
+  h1 {
+    grid-column: 1 / 4;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 2px rgb(128, 128, 128);
+  }
+
+  h3 {
+    font-size: 1rem;
+    text-shadow: 2px 2px 2px rgb(128, 128, 128);
+  }
+
+  #second_section a {
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px rgb(128, 128, 128);
+  }
+
+  .section_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  p {
+    padding: 1vw;
+  }
 }
