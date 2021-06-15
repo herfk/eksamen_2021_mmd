@@ -22,15 +22,25 @@ body {
   grid-column: 2 / 3;
 }
 
+#second_section {
+  padding: 1vw;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
 #third_section {
   display: flex;
   text-align: center;
   justify-content: center;
 }
 
-#third_section a {
-  color: black;
+.responsiv {
+  grid-column: 2 / 3;
   text-align: center;
+}
+
+.responsiv a {
+  color: black;
   text-decoration: none;
 }
 
@@ -104,17 +114,6 @@ body {
   animation-direction: alternate;
 }
 
-.elem_4:hover {
-  display: block;
-  background: honeydew;
-  width: 500px;
-  height: 250px;
-  margin: 5vw;
-  animation-name: box_hover;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
 @keyframes box {
   from {
     transform: translateX(-200px);
@@ -122,16 +121,6 @@ body {
 
   to {
     transform: translateX(200px);
-  }
-}
-
-@keyframes box_hover {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(90deg);
   }
 }
 

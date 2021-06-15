@@ -1,16 +1,29 @@
 let myRand;
+let life = 3;
+let points = 0;
 
 window.addEventListener("load", sidenVises);
 
 function sidenVises() {
     console.log("sidenVises");
-    startGame();
+    document.querySelector("#game").classList.add("hide");
+    document.querySelector("#game_over").classList.add("hide");
+    document.querySelector("#game_complete").classList.add("hide");
+    document.querySelector(".start_knap").addEventListener("mousedown", startGame);
 }
 
 function startGame() {
     console.log("startGame");
+    console.log("points")
 
-    //Giv container en position en delay og en speed
+    document.querySelector("#game").classList.remove("hide");
+    document.querySelector(".start_knap").classList.add("hide");
+    life;
+    points;
+    document.querySelector("#liv1").classList.remove("miste_liv");
+    document.querySelector("#liv2").classList.remove("miste_liv");
+    document.querySelector("#liv3").classList.remove("miste_liv");
+
     document.querySelector("#monster_container1").classList.add("pos1", "delay1", "speed3");
     document.querySelector("#monster_container2").classList.add("pos2", "delay2", "speed1");
     document.querySelector("#monster_container3").classList.add("pos3", "delay3", "speed4");
@@ -72,6 +85,8 @@ function genstartMonster1() {
 
     //Lyt efter klik på element
     document.querySelector("#monster_container1").addEventListener("mousedown", clickMonster1);
+    points++;
+
 }
 
 
@@ -127,6 +142,13 @@ function clickMonster3() {
 
     //Lyt efter flyv-animationer er færdig
     document.querySelector("#monster_container3").addEventListener("animationend", genstartMonster3);
+
+    document.querySelector("#liv" + life).classList.add("miste_liv");
+    life--;
+
+    if (life <= 0) {
+        stopSpil();
+    }
 }
 
 function genstartMonster3() {
@@ -151,6 +173,7 @@ function genstartMonster3() {
 
     //Lyt efter klik på element
     document.querySelector("#monster_container3").addEventListener("mousedown", clickMonster3);
+    points++;
 }
 
 function clickMonster4() {
@@ -166,6 +189,8 @@ function clickMonster4() {
 
     //Lyt efter flyv-animationer er færdig
     document.querySelector("#monster_container4").addEventListener("animationend", genstartMonster4);
+
+
 }
 
 function genstartMonster4() {
@@ -190,4 +215,23 @@ function genstartMonster4() {
 
     //Lyt efter klik på element
     document.querySelector("#monster_container4").addEventListener("mousedown", clickMonster4);
+    points++;
+}
+
+function stopSpil() {
+    if (points >= 3) {
+        gameComplete();
+    } else if ((points <= 2) || (life < 1)) {
+        gameOver();
+    }
+}
+
+function gameOver() {
+    document.querySelector("#game_over").classList.remove("hide");
+    document.querySelector("#game").classList.add("hide");
+}
+
+function gameComplete() {
+    document.querySelector("#game_complete").classList.remove("hide");
+    document.querySelector("#game").classList.add("hide");
 }

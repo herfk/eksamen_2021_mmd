@@ -26,12 +26,14 @@ body {
   width: 100vw;
   height: 56.25vw;
   overflow: hidden;
+  background-color: white;
 }
 
 #game {
   width: 100%;
   height: 100%;
   position: relative;
+  background-color: gray;
 }
 
 #game_background {
@@ -73,15 +75,11 @@ body {
 }
 
 #energy_board {
-  position: absolute;
-  top: 1vw;
-  left: 1vw;
   display: flex;
-  gap: 0.5vw;
-}
-
-#energy_board img {
-  width: 5vw;
+  gap: 1vw;
+  position: absolute;
+  bottom: 5vw;
+  left: 1vw;
 }
 
 .gray {
@@ -143,6 +141,46 @@ body {
   height: 18vw;
   background-image: url(img/spil_filer/monster_4.svg);
   background-size: 100%;
+}
+
+#liv1 {
+  background: lime;
+  width: 100px;
+  height: 50px;
+}
+
+#liv2 {
+  background: lime;
+  width: 100px;
+  height: 50px;
+}
+
+#liv3 {
+  background: lime;
+  width: 100px;
+  height: 50px;
+}
+
+.miste_liv {
+  animation-name: miste_liv;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes miste_liv {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.hide {
+  display: none;
 }
 
 .pos1 {
@@ -233,4 +271,22 @@ body {
 
 .speed4 {
   animation-duration: 6s;
+}
+
+#game_over {
+  background: white;
+  grid-column: 1 / 4;
+}
+
+#game_over h2 {
+  color: black;
+}
+
+#game_complete {
+  background: white;
+  grid-column: 1 / 4;
+}
+
+#game_complete h2 {
+  color: black;
 }
