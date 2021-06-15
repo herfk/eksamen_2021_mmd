@@ -30,13 +30,14 @@ body {
 
 #third_section {
   display: flex;
-  text-align: center;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .responsiv {
+  background: gray;
   grid-column: 2 / 3;
   text-align: center;
+  border-radius: 10%;
 }
 
 .responsiv a {
@@ -98,30 +99,6 @@ body {
 .elem_3 {
   grid-column: 4 / 6;
   grid-row: 1;
-}
-
-.elem_4 {
-  display: block;
-  background: linear-gradient(rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%);
-  width: 500px;
-  height: 250px;
-  border-radius: 5%;
-  box-shadow: 0 2px 5px rgb(145, 145, 145);
-  margin: 5vw;
-  animation-name: box;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes box {
-  from {
-    transform: translateX(-200px);
-  }
-
-  to {
-    transform: translateX(200px);
-  }
 }
 
 .list_2 li {
