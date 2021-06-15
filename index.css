@@ -1,9 +1,18 @@
+main {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+}
+
+#first_section {
+  grid-column: 2 / 3;
+}
+
 h1 {
-  font-family: "Poppins", sans-serif;
-  grid-column: 2 / 10;
-  grid-row: 2 / 3;
-  font-size: 5rem;
   margin: 0;
+  margin-top: 20vw;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 5rem;
   color: #fff;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
     0 0 42px rgb(31, 165, 255), 0 0 82px rgb(31, 165, 255),
@@ -57,11 +66,10 @@ body {
 .section_wrapper {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  justify-content: center;
   align-items: center;
   text-align: center;
-  height: 939px;
+  padding-top: 5vw;
+  margin-bottom: 303px;
 }
 
 .elem_1,
@@ -70,7 +78,6 @@ body {
 .elem_4,
 .elem_5 {
   justify-self: center;
-  grid-row: 4;
 }
 
 .elem_1 {
@@ -91,4 +98,17 @@ body {
 
 .elem_5 {
   grid-column: 9 / 11;
+}
+
+@media (max-width: 1200px) {
+  #first_section {
+    grid-column: 1 / 4;
+  }
+
+  .section_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    justify-content: center;
+  }
 }

@@ -57,14 +57,14 @@ body {
 
 .list_1 li {
   background: white;
-  width: 3vw;
-  height: 1vw;
+  width: 20%;
+  height: auto;
   margin: 1vw;
 }
 
 .list_2:hover {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(15, 1fr);
   grid-template-rows: 1fr;
   font-family: "Poppins", sans-serif;
   font-style: italic;
@@ -86,17 +86,17 @@ body {
 }
 
 .elem_1 {
-  grid-column: 3 / 4;
+  grid-column: 7 / 9;
   grid-row: 1;
 }
 
 .elem_2 {
-  grid-column: 1 / 2;
+  grid-column: 1 / 3;
   grid-row: 1;
 }
 
 .elem_3 {
-  grid-column: 2 / 3;
+  grid-column: 4 / 6;
   grid-row: 1;
 }
 
@@ -126,8 +126,8 @@ body {
 
 .list_2 li {
   background: white;
-  width: 3vw;
-  height: 1vw;
+  width: 20%;
+  height: auto;
   margin: 1vw;
 }
 
@@ -135,4 +135,95 @@ li {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   padding: 1vw;
+}
+
+@media (max-width: 1750px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  #first_section,
+  #second_section {
+    grid-column: 1 / 4;
+    width: 100%;
+    height: auto;
+  }
+
+  #second_section {
+    display: flex;
+  }
+
+  #third_section {
+    display: none;
+  }
+
+  .section_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    grid-column: 1 /4;
+  }
+
+  .list_1 {
+    display: flex;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    animation-name: hover;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .list_2 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    list-style: none;
+    animation-name: hover;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3vw;
+  }
+
+  .list_2 li {
+    background: white;
+    width: 100%;
+    height: 100%;
+  }
+
+  .elem_1 {
+    grid-column: 7 / 9;
+    grid-row: 1;
+  }
+
+  .elem_2 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .elem_3 {
+    grid-column: 4 / 6;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
 }

@@ -80,3 +80,34 @@ p {
   margin-left: 5vw;
   margin-right: 30vw;
 }
+
+@media (max-width: 1080px) {
+  #first_section,
+  #second_section,
+  #third_section {
+    grid-column: 1 / 4;
+  }
+
+  h1 {
+    grid-column: 1 / 4;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .col_ {
+    width: auto;
+    margin: 0.3vw;
+  }
+
+  .col_ p {
+    word-wrap: break-word;
+  }
+
+  .section_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

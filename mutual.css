@@ -124,3 +124,20 @@ p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
 }
+
+@media (max-width: 900px) {
+  h1 {
+    grid-column: 1 / 5;
+  }
+
+  #menu {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1 / 4;
+    margin-left: 2vw;
+    position: relative;
+    top: 0%;
+    width: 50%;
+    height: 0.5vw;
+  }
+}
